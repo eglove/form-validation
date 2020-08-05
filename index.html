@@ -14,14 +14,80 @@
 </head>
 <body>
 <div class="container">
-    <h1>Sign UP</h1>
+    <h1>Sign Up</h1>
     <!-- Form -->
     <form id="form">
         <!-- Full Name -->
         <div class="form-group">
-
+            <label for="name">Full Name</label>
+            <input type="text"
+                   id="name"
+                   placeholder="Full Name"
+                   name="name"
+                   required
+                   minlength="3"
+                   maxlength="100"
+            >
         </div>
+        <!-- Phone Numbjer -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel"
+                   id="phone"
+                   placeholder="5555555555"
+                   name="phone"
+                   required
+                   pattern="[0-9]{10}"
+            >
+        </div>
+        <!-- Email Address -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email"
+                   id="email"
+                   placeholder="name@email.com"
+                   name="email"
+                   required
+            >
+        </div>
+        <!-- Website URL -->
+        <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url"
+                   id="website"
+                   placeholder="https://example.com"
+                   name="website"
+                   required
+            >
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password1">Password (Min. 8 Characters)</label>
+            <input type="password"
+                   id="password1"
+                   placeholder=""
+                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                   title="Please include 1 upppercase character, 1 lowercase character and 1 number."
+                   required
+            >
+        </div>
+        <!-- Confirm Password -->
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password"
+                   id="password2"
+                   name="password"
+                   placeholder=""
+                   pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                   required
+            >
+        </div>
+        <button type="submit">Register</button>
     </form>
+    <!-- Error/Success Message -->
+    <div class="message-container">
+        <h3 id="message">Not a Real Sign Up Form!</h3>
+    </div>
 </div>
 <!-- Script -->
 <script src="script.js"></script>
